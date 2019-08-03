@@ -11,6 +11,7 @@ var userInViews = require('./lib/middleware/userInViews');
 var authRouter = require('./routes/auth');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+var db = require('./models');
 
 dotenv.load();
 
