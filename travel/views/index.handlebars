@@ -1,0 +1,29 @@
+<div class="container">
+{{#each tripPlans}}
+    <div class="card" style="width: 50%">
+        <!-- <img src="..." class="card-img-top" alt="..."> -->
+        
+        <div class="card-body">
+            {{!-- <div class="card-body"></div> --}}
+
+            <h5 class="card-title">Trip Name: {{tripName}} {{tripDates}}</h5>
+            <p class="card-text">{{tripNotes}}</p>
+        </div>
+        <ul class="list-group list-group-flush">
+            {{!-- companyName confirmation/flight number and time --}}
+            <li class="list-group-item">{{airlineName}} {{flightConNum}} {{flightTime}}</li>
+            <li class="list-group-item">{{rentalCarCompany}} {{rentalConNum}} {{rentalStartTime}}</li>
+            <li class="list-group-item">{{lodgeName}} {{lodgeConNum}} {{checkInTime}}</li>
+        </ul>
+
+        <div class="card-body">
+            <a href="#" class="card-link">Flight</a>
+            <a href="#" class="card-link">Transportation</a>
+            <a href="#" class="card-link">Lodging</a>
+        </div>
+       
+
+    </div>
+
+ {{/each}}
+</div>
