@@ -3,12 +3,14 @@
 /**
  * Module dependencies.
  */
-
+var express = require('express');
 var app = require('../app');
 var debug = require('debug')('nodejs-regular-webapp2:server');
 var http = require('http');
 var db = require('../models');
 
+// Static directory
+app.use(express.static('public'));
 /**
  * Get port from environment and store in Express.
  */

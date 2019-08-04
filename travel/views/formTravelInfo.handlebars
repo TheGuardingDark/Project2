@@ -1,0 +1,46 @@
+<div>
+    <a class="nav-button btn btn-primary" href="#" role="button">Add New Trip</a>
+    <h1>Trip Name: {{tripName}}</h1>
+</div>
+<div class="form-group">
+    <label for="filterType">Enter by Type</label>
+    <select id="filterType" class="form-control" name="travelType">
+        <option disabled selected> -- select a type -- </option>
+        <option value="">All</option>
+        <option value="Flight">Flight</option>
+        <option value="Transportation">Transportation</option>
+        <option value="Lodging">Lodging</option>
+    </select>
+
+    <div class="form-group">
+        <label for="startDate">Start Date</label>
+        <input type="text" class="form-control" id="startDate" name="startDate" placeholder="Start Date">
+    </div>
+
+    <div class="form-group">
+        <label for="endDate">End Date</label>
+        <input type="text" class="form-control" id="endDate" name="endDate" placeholder="End Date">
+    </div>
+
+    <div class="form-group">
+        <label for="confirmationNum">Confirmation Number</label>
+        <input type="text" class="form-control" id="confirmationNum" name="confirmationNum"
+            placeholder="Confirmation Number">
+    </div>
+
+    <div class="form-group">
+        <label for="startTime">Start Time</label>
+        <input type="text" class="form-control" id="startTime" name="startTime" placeholder="Start Time">
+    </div>
+
+    <div class="form-group">
+        <label for="endTime">End Time</label>
+        <input type="text" class="form-control" id="endTime" name="endTime" placeholder="End Time">
+    </div>
+
+    <div class="form-group">
+        <label for="notes">Notes</label>
+        <input type="text" class="form-control" id="notes" name="notes" placeholder="Notes">
+    </div>
+    
+</div>
