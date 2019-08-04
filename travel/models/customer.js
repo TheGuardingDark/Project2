@@ -26,13 +26,7 @@ module.exports = function (sequelize, DataTypes) {
 
   //   Sets up foreign keys on customerid with other models and deletes if customer is deleted
   Customer.associate = function (models) {
-    Customer.hasMany(models.Flight, {
-      onDelete: 'cascade'
-    });
-    Customer.hasMany(models.Lodging, {
-      onDelete: 'cascade'
-    });
-    Customer.hasMany(models.Transport, {
+    Customer.hasMany(models.tripName, {
       onDelete: 'cascade'
     });
     Customer.hasMany(models.tripName, {
