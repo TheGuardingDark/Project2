@@ -16,3 +16,8 @@ pre {
 .w3-card-4 {
     padding: 15px;
 }
+
+body {
+    background: url("../images/lake.jpg");
+    max-height: 100vh;
+  }

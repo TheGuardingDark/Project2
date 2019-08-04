@@ -33,7 +33,7 @@ module.exports = function (sequelize, DataTypes) {
     }
   });
   Lodging.associate = function (models) {
-    Lodging.belongsTo(models.tripName, {
+    Lodging.belongsTo(models.TripName, {
       foreignKey: {
         allowNull: false
       }
