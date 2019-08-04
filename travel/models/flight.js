@@ -37,7 +37,7 @@ module.exports = function (sequelize, DataTypes) {
   });
 
   Flight.associate = function (models) {
-    Flight.belongsTo(models.Customer, {
+    Flight.belongsTo(models.TripName, {
       foreignKey: {
         allowNull: false
       }
