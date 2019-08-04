@@ -1,5 +1,5 @@
 module.exports = function (sequelize, DataTypes) {
-  var tripName = sequelize.define('TripName', {
+  var TripName = sequelize.define('TripName', {
     tripName: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -9,8 +9,8 @@ module.exports = function (sequelize, DataTypes) {
     }
   });
 
-  tripName.associate = function (models) {
-    tripName.belongsTo(models.Customer, {
+  TripName.associate = function (models) {
+    TripName.belongsTo(models.Customer, {
       foreignKey: {
         allowNull: false
       }
@@ -26,5 +26,5 @@ module.exports = function (sequelize, DataTypes) {
     });
 
   };
-  return tripName;
+  return TripName;
 };
