@@ -35,6 +35,9 @@ module.exports = function (sequelize, DataTypes) {
     Customer.hasMany(models.Transport, {
       onDelete: 'cascade'
     });
+    Customer.hasMany(models.tripName, {
+      onDelete: 'cascade'
+    });
   };
   return Customer;
 };
