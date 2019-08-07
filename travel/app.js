@@ -87,6 +87,10 @@ app.use(userInViews());
 app.use('/', authRouter);
 app.use('/', indexRouter);
 app.use('/', usersRouter);
+app.use(express.static('public'));
+app.use(express.static('public/images'));
+require('./routes/api-routing')(app);
+require('./routes/html-routing')(app);
 
 // Catch 404 and forward to error handler
 app.use(function (req, res, next) {

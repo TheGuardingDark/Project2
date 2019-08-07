@@ -4,21 +4,21 @@ module.exports = function (app) {
   // read all itinerary entries
 
   app.get('/api/itinerary', function (req, res) {
-    db.Customer.findAll({
+    db.Tripname.findAll({
       where: {
         userId: req.user.user_id
       }
-    }).then(function (dbCustomer) {
-      res.json(dbCustomer);
+    }).then(function (dbTripname) {
+      res.json(dbTripname);
     });
   });
 
   // read all flight info for customer
 
-  app.get('/api/itinerary/flight/:user', function (req, res) {
+  app.get('/api/itinerary/flight/:trip', function (req, res) {
     db.Flight.findAll({
       where: {
-        CustomerId: req.body.CustomerId
+        TripNameId: req.body.TripnameId
       }
     }).then(function (dbFlight) {
       res.json(dbFlight);
@@ -27,10 +27,10 @@ module.exports = function (app) {
 
   // read all transport info for customer
 
-  app.get('/api/itinerary/transport/:user', function (req, res) {
+  app.get('/api/itinerary/transport/:trip', function (req, res) {
     db.Transport.findAll({
       where: {
-        CustomerId: req.body.CustomerId
+        TripNameId: req.body.TripNameId
       }
     }).then(function (dbTransport) {
       res.json(dbTransport);
@@ -39,10 +39,10 @@ module.exports = function (app) {
 
   // read all lodging info for customer
 
-  app.get('/api/itinerary/lodging/:user', function (req, res) {
+  app.get('/api/itinerary/lodging/:trip', function (req, res) {
     db.Lodging.findAll({
       where: {
-        CustomerId: req.body.CustomerId
+        TripNameId: req.body.TripNameId
       }
     }).then(function (dbLodging) {
       res.json(dbLodging);

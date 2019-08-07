@@ -1,9 +1,13 @@
 extends layout
 
 block content
-  .w3-container
-    if locals.user
-     .w3-card-4
-       h1 Welcome #{user.nickname}
-    else
-      h4 Keep all of your travel information in one place! Please #[a(href="/login") Log In/Sign Up] to continue.
+  .w3-container-fluid
+    .w3-card-6
+      img(src=('https://images.pexels.com/photos/1434580/pexels-photo-1434580.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260'))
+    .w3-panel.w3-left.welcomeTextBar
+      if locals.user
+        .w3-card-4.w3-light-grey
+          h1.w3-large.w3-serif.welcomeText Welcome #{user.nickname}
+      else
+          h4.w3-large.w3-serif.welcomeText Keep all of your travel information in one place! Please #[a(href="/login") Log In/Sign Up] to continue.
+  
