@@ -15,16 +15,15 @@ module.exports = function (sequelize, DataTypes) {
         allowNull: false
       }
     });
-    tripName.hasMany(models.Flight, {
+    TripName.hasMany(models.Flight, {
       onDelete: 'cascade'
     });
-    tripName.hasMany(mdoels.Lodging, {
+    TripName.hasMany(models.Lodging, {
       onDelete: 'cascade'
     });
-    tripName.hasMany(mdoels.Transport, {
+    TripName.hasMany(models.Transport, {
       onDelete: 'cascade'
     });
-
   };
   return TripName;
 };
